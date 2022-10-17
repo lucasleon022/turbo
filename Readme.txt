@@ -8,3 +8,4 @@ PROGRAMADOR: LUCAS LEÓN
 FECHA: 19/09/2022
 **********************************
 Este programa es para buscar la disponobilidad de un turbo en el catalogo para venderlo
+Tres tristes tigres comen trigo en un trigal
