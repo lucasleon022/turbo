@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\main",
+    "\\main\\Index",
+    "\\main\\resource"
   ],
-  "SelectedNode": "\\C:\\Desarrollo\\lucasleon022\\turbo",
+  "SelectedNode": "\\main\\resource\\VARIABLES.PY",
   "PreviewInSolutionExplorer": false
 }
