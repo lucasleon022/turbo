@@ -21,14 +21,14 @@ zona = 1,2,3,4
 
 #index
 
-#tamanio = input("ingrese tamanio")
-#print("usted quiere" + tamanio)
+tamanio = input("ingrese tamanio")
+print("usted quiere" + tamanio)
 
-#marca = input("ingrese marca")
-#print ("usted quiere" + marca)
+marca = input("ingrese marca")
+print ("usted quiere" + marca)
 
-#zona = input("ingrese zona")
-#print ("usted eligio" + zona)
+zona = input("ingrese zona")
+print ("usted eligio" + zona)
 
 #El usuario debe ingresar los datos del turbo
 #Verificar si el mismo esta disponible
