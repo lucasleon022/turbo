@@ -3,7 +3,7 @@
 import importlib
 
 
-tamanio=22.4, 44.8, 67.2
+tamanio=1, 2, 3
 
 #VARIABLES MARCAS
 
@@ -29,3 +29,10 @@ ws = wb.get_sheet_byname(name = 'Clientes')
 #FechaEntrega
 
 "calendar"
+
+import calendar
+ 
+fecha = calendar.TextCalendar(
+    calendar.SUNDAY)
+
+print(fecha.prmonth (2022, 11))

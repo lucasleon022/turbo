@@ -13,22 +13,22 @@ from operator import concat
 from tkinter import N, Y
 
 #VARIABLES
-tamanio = 22.4, 44.8, 67.2
+tamanio = 1, 2, 3
 
-marca = "GARRET", "KKK", "MITSUBISHI", "T0YOTA", "BORG WARNER" , "Ihi" , "HOLSET"
+marca = "garret", "kkk", "mitsubishi", "toyota", "borg warner" , "ihi" , "holset"
 
 zona = 1,2,3,4
 
 #index
 
-tamanio = input("ingrese tamanio")
-print("usted quiere" + tamanio)
+#tamanio = input("ingrese tamanio")
+#print("usted quiere" + tamanio)
 
-marca = input("ingrese marca")
-print ("usted quiere" + marca)
+#marca = input("ingrese marca")
+#print ("usted quiere" + marca)
 
-zona = input("ingrese zona")
-print ("usted eligio" + zona)
+#zona = input("ingrese zona")
+#print ("usted eligio" + zona)
 
 #El usuario debe ingresar los datos del turbo
 #Verificar si el mismo esta disponible
@@ -38,7 +38,7 @@ print ("usted eligio" + zona)
 
 while True:
     tamanio = int(input("Ingrese tamanio"))
-    if tamanio != 22.4 :
+    if tamanio != 1 :
         print("Escriba un tamanio valido")
     else:
         print("Tamanio valido")
@@ -47,7 +47,7 @@ while True:
 
 while True:
     marca = input("Ingrese marca")
-    if marca != "GARRET":
+    if marca != "kkk":
         print("Eliga marca valida")
     else:
         print("Marca valida")
@@ -62,3 +62,28 @@ while True:
         print("Zona valida")
         break
     continue
+
+
+#VARIABLEUSUARIO
+
+import openpyxl
+
+
+#definimos la ubicacion del archivo
+
+wb = openpyxl.load_workbook('C:\Desarroyo\Excel\basse de datos Turbo')
+
+print(wb.sheetnames)
+
+ws = wb.get_sheet_byname(name = 'Clientes')
+
+#FechaEntrega
+
+"calendar"
+
+import calendar
+ 
+fecha = calendar.TextCalendar(
+    calendar.SUNDAY)
+
+print(fecha.prmonth (2022, 11))
