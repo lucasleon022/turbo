@@ -47,7 +47,7 @@ while True:
 
 while True:
     marca = input("Ingrese marca")
-    if marca != "kkk":
+    if marca != "kkk" :
         print("Eliga marca valida")
     else:
         print("Marca valida")
@@ -64,6 +64,17 @@ while True:
     continue
 
 
+#FechaEntrega
+
+"calendar"
+
+import calendar
+ 
+fecha = calendar.TextCalendar(
+    calendar.SUNDAY)
+
+print(fecha.prmonth (2022, 11))
+
 #VARIABLEUSUARIO
 
 import openpyxl
@@ -77,13 +88,3 @@ print(wb.sheetnames)
 
 ws = wb.get_sheet_byname(name = 'Clientes')
 
-#FechaEntrega
-
-"calendar"
-
-import calendar
- 
-fecha = calendar.TextCalendar(
-    calendar.SUNDAY)
-
-print(fecha.prmonth (2022, 11))
