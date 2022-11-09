@@ -30,6 +30,8 @@ ws = wb.get_sheet_byname(name = 'Clientes')
 
 "calendar"
 
+#calendario para seleccionar mes en espesifico
+
 import calendar
  
 fecha = calendar.TextCalendar(
