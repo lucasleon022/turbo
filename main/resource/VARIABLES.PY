@@ -7,7 +7,7 @@ tamanio=1, 2, 3
 
 #VARIABLES MARCAS
 
-marca= "GARRET" , "KKK" , "MITSUBISHI" , "TOYOTA" , "BORG WARNER" , "Ihi" , "HOLSET"
+marca= "garret", "kkk", "mitsubishi", "toyota", "borg warner" , "ihi" , "holset"
 
 #VARIABLES ZONA
 
