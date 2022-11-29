@@ -38,60 +38,102 @@ zona = 1,2,3,4
 eleccion = 0
 eleccion2 = 0
 
-while eleccion !=4:
-    print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas")
-    eleccion = int(input())
-   
-    if eleccion == 1 :
-        print("1 pulgada")
-        break
+quiereComenzar = Y,N
+
+continuamos = Y,N
 
 
-    if eleccion == 2 :
-        print("2 pulgadas")
-        break
+#Variable de contabilidad
+cuentaMarca = 0
 
+cuentaTamanio = 0
 
-    if eleccion == 3 :
-        print("3 pulgadas")
-        break
-
-    continue
-   
+cuentaModeloTotal = cuentaMarca
+cuentaTalleTotal = cuentaTamanio
 
 while True:
-    print("Marcas disponibles kkk, garret, mitsubishi, toyota, borg warner, ihi, holset")
-    marca = input("Ingrese marca")
+  quiereComenzar = input('¿Comenzamos? / ¿Seguir?')
+  if quiereComenzar !=N:
+
+    while eleccion !=4:
+        print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas")
+        eleccion = int(input())
+   
+        if eleccion == 1 :
+            print("1 pulgada")
+            break
+
+
+        if eleccion == 2 :
+            print("2 pulgadas")
+            break
+
+
+        if eleccion == 3 :
+            print("3 pulgadas")
+            break
+
+        continue
+   
+
+    while True:
+        print("Marcas disponibles kkk, garret, mitsubishi, toyota, borg warner, ihi, holset")
+        marca = input("Ingrese marca")
     
-    if marca != "kkk" and marca != "garret" and marca != "mitsubishi" and marca != "toyota" and marca != "borg warner" and marca != "ihi" and marca != "holset" :
-        print("Eliga marca valida")
+        if marca != "kkk" and marca != "garret" and marca != "mitsubishi" and marca != "toyota" and marca != "borg warner" and marca != "ihi" and marca != "holset" :
+            print("Eliga marca valida")
+        else:
+            print("Marca valida")
+            break
+        continue
+
+    while eleccion2 != 5:
+        print("Ingrese zona deseada: 1 Norte, 2 Sur, 3 Este o 4 Oeste")
+        eleccion2 = int(input())
+    
+        if eleccion2 == 1 :
+            print("Zona Norte, proxima entrega en 24hs")
+            break
+
+        if eleccion2 == 2 :
+            print("Zona Sur, proxima entrega en 48hs")
+            break
+
+        if eleccion2 == 3 :
+            print("Zona Este, proxima entrega en 3 dias")
+            break
+
+        if eleccion2 == 4 :
+            print("Zona Oeste, proxima entrega en 4 dias")
+            break
+
+        continue
+
+    while True:
+        if marca == "kkk" or marca== "garret" or marca == "mitsubishi" or marca == "toyota" :
+         cuentaMarca+=1
+         print(cuentaMarca)
+         break
+        continue
+    while True:    
+        if eleccion == 2 or eleccion == 1 or eleccion == 3 :
+         cuentaTamanio+=1
+         print(cuentaTamanio)
+         break  
+        else:
+            print("¿Y entonces qué queres?")
+    break
+
+
+while True:
+    continuamos = print("¿Quiere continuar?")
+    if continuamos == Y:
+      quiereComenzar()
     else:
-        print("Marca valida")
-        break
+      print("muchas gracias")
+      break
     continue
 
-while eleccion2 != 5:
-    print("Ingrese zona deseada: 1 Norte, 2 Sur, 3 Este o 4 Oeste")
-    eleccion2 = int(input())
-    
-    if eleccion2 == 1 :
-        print("Zona Norte, proxima entrega en 24hs")
-        break
-
-    if eleccion2 == 2 :
-        print("Zona Sur, proxima entrega en 48hs")
-        break
-
-    if eleccion2 == 3 :
-        print("Zona Este, proxima entrega en 3 dias")
-        break
-
-    if eleccion2 == 4 :
-        print("Zona Oeste, proxima entrega en 4 dias")
-        break
-
-    continue
-    
 
 
 #FechaEntrega
@@ -112,9 +154,9 @@ import openpyxl
 
 #definimos la ubicacion del archivo
 
-wb = openpyxl.load_workbook('C:\Desarroyo\Excel\basse de datos Turbo')
+wb = openpyxl.load_workbook('C:\Desarrollo\Excel\Basse de datos Turbo.xlsx')
 
 print(wb.sheetnames)
 
-ws = wb.get_sheet_byname(name = 'Clientes')
+ws = wb['Clientes']
 
