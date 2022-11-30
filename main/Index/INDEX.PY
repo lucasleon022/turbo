@@ -38,7 +38,7 @@ zona = 1,2,3,4
 eleccion = 0
 eleccion2 = 0
 
-quiereComenzar = Y,N
+Comenzar = Y,N
 
 continuamos = Y,N
 
@@ -119,25 +119,19 @@ while True:
             if eleccion == 2 or eleccion == 1 or eleccion == 3 :
              cuentaTamanio+=1
             print(cuentaTamanio)
-            break  
+            break 
+        while True:
+         continuamos = input("¿Quiere continuar?")
+         if continuamos != N:
+          Comenzar
+         else:
+          print("muchas gracias")
+         break
+        continue 
     else:
      print("¿Y entonces qué queres?")
      break
-    continue
-
-
-
-
-
-while True:
-   continuamos = input("¿Quiere continuar?")
-   if continuamos == Y:
-      Comenzar()
-   else:
-      print("muchas gracias")
-      break
-   continue
-
+    
 
 
 #FechaEntrega
@@ -157,7 +151,7 @@ import openpyxl
 
 #definimos la ubicacion del archivo
 
-wb = openpyxl.load_workbook('C:\Desarroyo\Excel\Basse de datos Turbo.xlsx')
+wb = openpyxl.load_workbook('C:\Desarrollo\Excel\Basse de datos Turbo.xlsx')
 
 print(wb.sheetnames)
 
