@@ -51,88 +51,92 @@ cuentaTamanio = 0
 cuentaModeloTotal = cuentaMarca
 cuentaTalleTotal = cuentaTamanio
 
-while True:
-  quiereComenzar = input('¿Comenzamos? / ¿Seguir?')
-  if quiereComenzar !=N:
-
-    while eleccion !=4:
-        print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas")
-        eleccion = int(input())
-   
-        if eleccion == 1 :
-            print("1 pulgada")
-            break
-
-
-        if eleccion == 2 :
-            print("2 pulgadas")
-            break
-
-
-        if eleccion == 3 :
-            print("3 pulgadas")
-            break
-
-        continue
-   
-
-    while True:
-        print("Marcas disponibles kkk, garret, mitsubishi, toyota, borg warner, ihi, holset")
-        marca = input("Ingrese marca")
-    
-        if marca != "kkk" and marca != "garret" and marca != "mitsubishi" and marca != "toyota" and marca != "borg warner" and marca != "ihi" and marca != "holset" :
-            print("Eliga marca valida")
-        else:
-            print("Marca valida")
-            break
-        continue
-
-    while eleccion2 != 5:
-        print("Ingrese zona deseada: 1 Norte, 2 Sur, 3 Este o 4 Oeste")
-        eleccion2 = int(input())
-    
-        if eleccion2 == 1 :
-            print("Zona Norte, proxima entrega en 24hs")
-            break
-
-        if eleccion2 == 2 :
-            print("Zona Sur, proxima entrega en 48hs")
-            break
-
-        if eleccion2 == 3 :
-            print("Zona Este, proxima entrega en 3 dias")
-            break
-
-        if eleccion2 == 4 :
-            print("Zona Oeste, proxima entrega en 4 dias")
-            break
-
-        continue
-
-    while True:
-        if marca == "kkk" or marca== "garret" or marca == "mitsubishi" or marca == "toyota" :
-         cuentaMarca+=1
-         print(cuentaMarca)
-         break
-        continue
-    while True:    
-        if eleccion == 2 or eleccion == 1 or eleccion == 3 :
-         cuentaTamanio+=1
-         print(cuentaTamanio)
-         break  
-        else:
-            print("¿Y entonces qué queres?")
-    break
-
 
 while True:
-    continuamos = print("¿Quiere continuar?")
-    if continuamos == Y:
-      quiereComenzar()
+    Comenzar = input('¿Comenzamos?')
+    if Comenzar !=N:
+        while eleccion !=4:
+           print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas")
+           eleccion = int(input())
+   
+           if eleccion == 1 :
+              print("1 pulgada")
+              break
+
+
+           if eleccion == 2 :
+              print("2 pulgadas")
+              break
+
+
+           if eleccion == 3 :
+              print("3 pulgadas")
+              break
+
+         #continue
+   
+
+        while True:
+            print("Marcas disponibles kkk, garret, mitsubishi, toyota, borg warner, ihi, holset")
+            marca = input("Ingrese marca")
+    
+            if marca != "kkk" and marca != "garret" and marca != "mitsubishi" and marca != "toyota" and marca != "borg warner" and marca != "ihi" and marca != "holset" :
+                print("Eliga marca valida")
+            else:
+                print("Marca valida")
+                break
+            continue
+
+        while eleccion2 != 5:
+            print("Ingrese zona deseada: 1 Norte, 2 Sur, 3 Este o 4 Oeste")
+            eleccion2 = int(input())
+    
+            if eleccion2 == 1 :
+                print("Zona Norte, proxima entrega en 24hs")
+                break
+
+            if eleccion2 == 2 :
+                print("Zona Sur, proxima entrega en 48hs")
+                break
+
+            if eleccion2 == 3 :
+                print("Zona Este, proxima entrega en 3 dias")
+                break
+
+            if eleccion2 == 4 :
+                print("Zona Oeste, proxima entrega en 4 dias")
+                break
+
+            continue
+
+        while True:
+            if marca == "kkk" or marca== "garret" or marca == "mitsubishi" or marca == "toyota" or marca == "borg warner" or marca == "ihi" or marca == "holset":
+                cuentaMarca+=1
+                print(cuentaMarca)
+                break
+            continue
+        while True:    
+            if eleccion == 2 or eleccion == 1 or eleccion == 3 :
+             cuentaTamanio+=1
+            print(cuentaTamanio)
+            break  
     else:
+     print("¿Y entonces qué queres?")
+     break
+    continue
+
+
+
+
+
+while True:
+   continuamos = input("¿Quiere continuar?")
+   if continuamos == Y:
+      Comenzar()
+   else:
       print("muchas gracias")
       break
-    continue
+   continue
 
 
 
@@ -141,7 +145,7 @@ while True:
 "calendar"
 
 import calendar
- 
+
 fecha = calendar.TextCalendar(
     calendar.SUNDAY)
 
@@ -151,10 +155,9 @@ print(fecha.prmonth (2022, 11))
 
 import openpyxl
 
-
 #definimos la ubicacion del archivo
 
-wb = openpyxl.load_workbook('C:\Desarrollo\Excel\Basse de datos Turbo.xlsx')
+wb = openpyxl.load_workbook('C:\Desarroyo\Excel\Basse de datos Turbo.xlsx')
 
 print(wb.sheetnames)
 
