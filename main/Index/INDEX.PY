@@ -56,7 +56,7 @@ while True:
     Comenzar = input('¿Comenzamos?')
     if Comenzar !=N:
         while eleccion !=4:
-           print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas")
+           print("Indique tamaño deseado 1 pulgada, 2 pulgadas o 3 pulgadas ")
            eleccion = int(input())
    
            if eleccion == 1 :
@@ -78,7 +78,7 @@ while True:
 
         while True:
             print("Marcas disponibles kkk, garret, mitsubishi, toyota, borg warner, ihi, holset")
-            marca = input("Ingrese marca")
+            marca = input("Ingrese marca ")
     
             if marca != "kkk" and marca != "garret" and marca != "mitsubishi" and marca != "toyota" and marca != "borg warner" and marca != "ihi" and marca != "holset" :
                 print("Eliga marca valida")
